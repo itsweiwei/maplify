@@ -1,20 +1,31 @@
 import React from 'react';
-import { Card, CardGroup } from 'react-bootstrap';
+import Transaction from "../../Components/Transaction";
+import { Container, Col } from 'react-bootstrap';
 
-class Transaction extends React.Component{
-    render(){
-        return(
-            <Card>
-            </Card>
-        );
-    }
-}
 
 class Log extends React.Component{
+    constructor(props){
+        super(props);
+        this.transactionsList = [
+            {
+                id: 0,
+                amount: 2000000000,
+                user: "Miinaries",
+                description: "Farming"
+            }
+        ];
+    }
+
     render(){
         return(
-            <CardGroup>
-            </CardGroup>
+            <Container>
+                <h1>All Meso Transactions</h1>
+                <Col>
+                {this.transactionsList.map(entries =>(
+                    <Transaction data={entries}/>
+                ))}
+                </Col>
+            </Container>
         );
     }
 }

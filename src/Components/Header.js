@@ -13,7 +13,9 @@ class Header extends React.Component{
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="me-auto">
                             <Nav.Link href="logger">Logger</Nav.Link>
+                            <Nav.Link href="log">All Logs</Nav.Link>
                         </Nav>
+                        
                     </Navbar.Collapse>
             </Navbar>
         );
